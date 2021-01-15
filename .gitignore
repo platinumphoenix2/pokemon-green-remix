@@ -1,7 +1,3 @@
-# Audio and Graphics folders
-Audio/
-Graphics/
-
 # Data folder, but not Data/Scripts folder
 Data/*
 !Data/Scripts.rxdata
