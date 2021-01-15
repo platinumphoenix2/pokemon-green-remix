@@ -1,4 +1,3 @@
-#===============================================================================
 # Power is doubled if the target's HP is down to 1/2 or less. (Brine)
 #===============================================================================
 class PokeBattle_Move_080 < PokeBattle_Move
@@ -105,7 +104,13 @@ end
 #===============================================================================
 class PokeBattle_Move_087 < PokeBattle_Move
   def pbBaseDamage(baseDmg,user,target)
-    baseDmg *= 2 if @battle.pbWeather!=PBWeather::None
+    if @battle.pbWeather!=PBWeather::None && @battle.pbWeather != PBWeather::StrongWinds
+      if @battle.pbWeather == PBWeather::Sandstorm || @battle.pbWeather == PBWeather::Hail || @battle.pbWeather == PBWeather::Fog
+        baseDmg *= 2
+      elsif !user.hasUtilityUmbrella?
+        baseDmg *= 2
+      end
+    end
     return baseDmg
   end
 
@@ -120,6 +125,9 @@ class PokeBattle_Move_087 < PokeBattle_Move
       ret = getConst(PBTypes,:ROCK) || ret
     when PBWeather::Hail
       ret = getConst(PBTypes,:ICE) || ret
+    end
+    if user.hasUtilityUmbrella? && (ret == getConst(PBTypes,:FIRE) || ret == getConst(PBTypes,:WATER))
+      ret = getID(PBTypes,:NORMAL)
     end
     return ret
   end
@@ -1177,6 +1185,7 @@ class PokeBattle_Move_0AF < PokeBattle_Move
        "14B",   # King's Shield
        "14C",   # Spiky Shield
        "168",   # Baneful Bunker
+	     "180",   # Obstruct
        # Moves that call other moves
        "0AE",   # Mirror Move
        "0AF",   # Copycat (this move)
@@ -1500,6 +1509,7 @@ class PokeBattle_Move_0B5 < PokeBattle_Move
        "14B",   # King's Shield
        "14C",   # Spiky Shield
        "168",   # Baneful Bunker
+	     "180",   # Obstruct
        # Moves that call other moves
        "0AE",   # Mirror Move
        "0AF",   # Copycat
@@ -1623,6 +1633,7 @@ class PokeBattle_Move_0B6 < PokeBattle_Move
        "14B",   # King's Shield
        "14C",   # Spiky Shield
        "168",   # Baneful Bunker
+	     "180",   # Obstruct
        # Moves that call other moves
        "0AE",   # Mirror Move
        "0AF",   # Copycat
@@ -1957,7 +1968,7 @@ class PokeBattle_Move_0BF < PokeBattle_Move
   end
 
   def pbBaseDamage(baseDmg,user,target)
-    @calcBaseDmg += baseDmg
+    @calcBaseDmg += baseDmg if !target.damageState.disguise || !target.damageState.iceface
     return @calcBaseDmg
   end
 end
@@ -2059,11 +2070,10 @@ class PokeBattle_Move_0C4 < PokeBattle_TwoTurnMove
     ret = super
     if user.effects[PBEffects::TwoTurnAttack]==0
       w = @battle.pbWeather
-      if w==PBWeather::Sun || w==PBWeather::HarshSun
+      if (w==PBWeather::Sun || w==PBWeather::HarshSun) && !user.hasUtilityUmbrella?
         @powerHerb = false
         @chargingTurn = true
         @damagingTurn = true
-        return false
       end
     end
     return ret
@@ -2075,7 +2085,11 @@ class PokeBattle_Move_0C4 < PokeBattle_TwoTurnMove
 
   def pbBaseDamageMultiplier(damageMult,user,target)
     w = @battle.pbWeather
-    damageMult /= 2 if w>0 && w!=PBWeather::Sun && w!=PBWeather::HarshSun
+    if w!=PBWeather::None && w!=PBWeather::Sun && w!=PBWeather::HarshSun
+      if !((w==PBWeather::Rain || w==PBWeather::HeavyRain) && user.hasUtilityUmbrella?)
+        damageMult = (damageMult/2.0).round
+      end
+    end
     return damageMult
   end
 end
@@ -2186,6 +2200,12 @@ end
 class PokeBattle_Move_0CB < PokeBattle_TwoTurnMove
   def pbChargingTurnMessage(user,targets)
     @battle.pbDisplay(_INTL("{1} hid underwater!",user.pbThis))
+    if isConst?(user.species,PBSpecies,:CRAMORANT) &&
+      user.hasActiveAbility?(:GULPMISSILE) && user.form==0
+      user.form=2
+      user.form=1 if user.hp>(user.totalhp/2)
+      @battle.scene.pbChangePokemon(user,user.pokemon)
+    end
   end
 end
 
@@ -2333,6 +2353,10 @@ class PokeBattle_Move_0CF < PokeBattle_Move
       msg = _INTL("{1} became trapped by Sand Tomb!",target.pbThis)
     elsif isConst?(@id,PBMoves,:WHIRLPOOL)
       msg = _INTL("{1} became trapped in the vortex!",target.pbThis)
+    elsif isConst?(@id,PBMoves,:SNAPTRAP)
+      msg = _INTL("{1} was caught in the Snap Trap!",target.pbThis)
+    elsif isConst?(@id,PBMoves,:THUNDERCAGE)
+      msg = _INTL("{1} trapped {2} in a Thunder Cage!",user.pbThis,target.pbThis(true))
     elsif isConst?(@id,PBMoves,:WRAP)
       msg = _INTL("{1} was wrapped by {2}!",target.pbThis,user.pbThis(true))
     end
@@ -2556,7 +2580,17 @@ class PokeBattle_Move_0D8 < PokeBattle_HealingMove
   def pbOnStartUse(user,targets)
     case @battle.pbWeather
     when PBWeather::Sun, PBWeather::HarshSun
-      @healAmount = (user.totalhp*2/3.0).round
+      if !user.hasUtilityUmbrella?
+        @healAmount = (user.totalhp*2/3.0).round
+      else
+        @healAmount = (user.totalhp/2.0).round
+      end
+    when PBWeather::Rain, PBWeather::HeavyRain
+      if !user.hasUtilityUmbrella?
+        @healAmount = (user.totalhp/4.0).round
+      else
+        @healAmount = (user.totalhp/2.0).round
+      end
     when PBWeather::None, PBWeather::StrongWinds
       @healAmount = (user.totalhp/2.0).round
     else
@@ -2970,16 +3004,27 @@ end
 #===============================================================================
 class PokeBattle_Move_0EA < PokeBattle_Move
   def pbMoveFailed?(user,targets)
-    if !@battle.pbCanRun?(user.index)
+    if !@battle.pbCanChooseNonActive?(user.index) || user.fainted?
       @battle.pbDisplay(_INTL("But it failed!"))
       return true
     end
     return false
   end
 
-  def pbEffectGeneral(user)
-    @battle.pbDisplay(_INTL("{1} fled from battle!",user.pbThis))
-    @battle.decision = 3   # Escaped
+  def pbEndOfMoveUsageEffect(user,targets,numHits,switchedBattlers)
+    return if user.fainted? || numHits==0
+    return if !@battle.pbCanChooseNonActive?(user.index)
+    @battle.pbDisplay(_INTL("{1} went back to {2}!",user.pbThis,
+       @battle.pbGetOwnerName(user.index)))
+    @battle.pbPursuit(user.index)
+    return if user.fainted?
+    newPkmn = @battle.pbGetReplacementPokemonIndex(user.index)   # Owner chooses
+    return if newPkmn<0
+    @battle.pbRecallAndReplace(user.index,newPkmn)
+    @battle.pbClearChoice(user.index)   # Replacement Pokémon does nothing this round
+    @battle.moldBreaker = false
+    switchedBattlers.push(user.index)
+    user.pbEffectsOnSwitchIn(true)
   end
 end
 
@@ -3556,6 +3601,7 @@ class PokeBattle_Move_0F7 < PokeBattle_Move
       return
     end
     return if pbIsMegaStone?(user.item)
+    return if pbIsTechnicalRecord?(user.item) if NEWEST_BATTLE_MECHANICS
     flingableItem = false
     @flingPowers.each do |_power,items|
       items.each do |i|
@@ -3587,6 +3633,12 @@ class PokeBattle_Move_0F7 < PokeBattle_Move
   def pbNumHits(user,targets); return 1; end
 
   def pbBaseDamage(baseDmg,user,target)
+	if pbIsTechnicalRecord?(user.item)
+		movedata = pbGetMoveData(pbGetMachine(user.item))
+		return 10 if movedata[MOVE_CATEGORY] == 2 # status move
+		return 10 if movedata[MOVE_BASE_DAMAGE] < 10
+		return movedata[MOVE_BASE_DAMAGE]
+	end
     return 10 if pbIsBerry?(user.item)
     return 80 if pbIsMegaStone?(user.item)
     @flingPowers.each do |power,items|

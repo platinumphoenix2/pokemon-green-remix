@@ -131,12 +131,15 @@ class PokeBattle_Move_008 < PokeBattle_ParalysisMove
   def hitsFlyingTargets?; return true; end
 
   def pbBaseAccuracy(user,target)
-    case @battle.pbWeather
-    when PBWeather::Sun, PBWeather::HarshSun
-      return 50
-    when PBWeather::Rain, PBWeather::HeavyRain
-      return 0
-    end
+	if target.hasUtilityUmbrella?
+		return super
+	end
+	case @battle.pbWeather
+	when PBWeather::Sun, PBWeather::HarshSun
+	  return 50
+	when PBWeather::Rain, PBWeather::HeavyRain
+	  return 0
+	end
     return super
   end
 end
@@ -321,12 +324,15 @@ class PokeBattle_Move_015 < PokeBattle_ConfuseMove
   def hitsFlyingTargets?; return true; end
 
   def pbBaseAccuracy(user,target)
-    case @battle.pbWeather
-    when PBWeather::Sun, PBWeather::HarshSun
+    if target.hasUtilityUmbrella?
+	    return super
+	  end
+	  case @battle.pbWeather
+	  when PBWeather::Sun, PBWeather::HarshSun
       return 50
-    when PBWeather::Rain, PBWeather::HeavyRain
-      return 0
-    end
+	  when PBWeather::Rain, PBWeather::HeavyRain
+	    return 0
+	  end
     return super
   end
 end
@@ -749,7 +755,7 @@ class PokeBattle_Move_028 < PokeBattle_MultiStatUpMove
     increment = 1
     if @battle.pbWeather==PBWeather::Sun ||
        @battle.pbWeather==PBWeather::HarshSun
-      increment = 2
+      increment = 2 if !user.hasUtilityUmbrella?
     end
     @statUp[1] = @statUp[3] = increment
   end
@@ -1355,8 +1361,26 @@ class PokeBattle_Move_049 < PokeBattle_TargetStatDownMove
        (NEWEST_BATTLE_MECHANICS &&
        target.pbOpposingSide.effects[PBEffects::StickyWeb])
       target.pbOwnSide.effects[PBEffects::StickyWeb]      = false
+      target.pbOwnSide.effects[PBEffects::StickyWebUser]  = -1
       target.pbOpposingSide.effects[PBEffects::StickyWeb] = false if NEWEST_BATTLE_MECHANICS
+      target.pbOpposingSide.effects[PBEffects::StickyWebUser] = -1 if NEWEST_BATTLE_MECHANICS
       @battle.pbDisplay(_INTL("{1} blew away sticky webs!",user.pbThis))
+    end
+    case @battle.field.terrain
+      when PBBattleTerrains::Electric
+        @battle.pbDisplay(_INTL("The electric current disappeared from the battlefield!"))
+      when PBBattleTerrains::Grassy
+        @battle.pbDisplay(_INTL("The grass disappeared from the battlefield!"))
+      when PBBattleTerrains::Misty
+        @battle.pbDisplay(_INTL("The mist disappeared from the battlefield!"))
+      when PBBattleTerrains::Psychic
+        @battle.pbDisplay(_INTL("The weirdness disappeared from the battlefield!"))
+    end
+    @battle.pbStartTerrain(user,PBBattleTerrains::None,true)
+    case @battle.pbWeather
+    when PBWeather::Fog
+      @battle.pbDisplay(_INTL("{1} blew away the deep fog!",user.pbThis))
+      @weatherType = PBWeather::None
     end
   end
 end
@@ -2532,6 +2556,17 @@ class PokeBattle_Move_075 < PokeBattle_Move
   def pbModifyDamage(damageMult,user,target)
     damageMult *= 2 if target.inTwoTurnAttack?("0CB")   # Dive
     return damageMult
+  end
+
+  def pbEffectAfterAllHits(user,target)
+    if !target.damageState.unaffected && !target.damageState.protected &&
+	  !target.damageState.missed &&
+	  isConst?(user.species,PBSpecies,:CRAMORANT) &&
+      user.hasActiveAbility?(:GULPMISSILE) && user.form==0
+      user.form=2
+      user.form=1 if user.hp>(user.totalhp/2)
+      @battle.scene.pbChangePokemon(user,user.pokemon)
+    end
   end
 end
 

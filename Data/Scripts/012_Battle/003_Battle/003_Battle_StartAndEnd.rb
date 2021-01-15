@@ -235,6 +235,9 @@ class PokeBattle_Battle
   # Start a battle
   #=============================================================================
   def pbStartBattle
+    # Set spinning to false if a battle is started. Prevents evolution by illegal means
+    $PokemonTemp.clockwiseSpin = false
+    $PokemonTemp.antiClockwiseSpin = false
     PBDebug.log("")
     PBDebug.log("******************************************")
     logMsg = "[Started battle] "
@@ -281,6 +284,7 @@ class PokeBattle_Battle
     when PBWeather::HeavyRain;   pbDisplay(_INTL("It is raining heavily."))
     when PBWeather::StrongWinds; pbDisplay(_INTL("The wind is strong."))
     when PBWeather::ShadowSky;   pbDisplay(_INTL("The sky is shadowy."))
+    when PBWeather::Fog;         pbDisplay(_INTL("The fog is deep..."))
     end
     # Terrain announcement
     pbCommonAnimation(PBBattleTerrains.animationName(@field.terrain))

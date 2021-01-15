@@ -61,7 +61,6 @@ class PokeBattle_RealBattlePeer
 
   # For switching out, including due to fainting, and for the end of battle
   def pbOnLeavingBattle(battle,pkmn,usedInBattle,endBattle=false)
-    return if !pkmn
     f = MultipleForms.call("getFormOnLeavingBattle",pkmn,battle,usedInBattle,endBattle)
     pkmn.form = f if f && pkmn.form!=f
     pkmn.hp = pkmn.totalhp if pkmn.hp>pkmn.totalhp
@@ -208,6 +207,61 @@ end
 #===============================================================================
 # Regular form differences
 #===============================================================================
+
+MultipleForms.register(:PIKACHU,{
+  "onSetForm" => proc { |pkmn,form,oldForm|
+    pkmn.makeFemale if [3..8].include?(form)
+    formMoves = [
+       :ICICLECRASH,      # Belle Pikachu
+       :FLYINGPRESS,      # Libre Pikachu
+       :ELECTRICTERRAIN,  # PhD Pikachu
+       :DRAININGKISS,     # Pop Star Pikachu
+       :METEORMASH        # Rockstar Pikachu
+    ]
+    idxMoveToReplace = -1
+    pkmn.moves.each_with_index do |move,i|
+      next if !move
+      formMoves.each do |newMove|
+        next if !isConst?(move.id,PBMoves,newMove)
+        idxMoveToReplace = i
+        break
+      end
+      break if idxMoveToReplace>=0
+    end
+    if !([3..8].include?(form))
+      if idxMoveToReplace>=0
+        moveName = PBMoves.getName(pkmn.moves[idxMoveToReplace].id)
+        pkmn.pbDeleteMoveAtIndex(idxMoveToReplace)
+        pbMessage(_INTL("{1} forgot {2}...",pkmn.name,moveName))
+        pkmn.pbLearnMove(:THUNDERSHOCK) if pkmn.numMoves==0
+      end
+    else
+      newMove = getConst(PBMoves,formMoves[form-4])
+      if idxMoveToReplace>=0
+        oldMoveName = PBMoves.getName(pkmn.moves[idxMoveToReplace].id)
+        if newMove && newMove>0
+          newMoveName = PBMoves.getName(newMove)
+          pkmn.moves[idxMoveToReplace].id = newMove
+          pbMessage(_INTL("1,\\wt[16] 2, and\\wt[16]...\\wt[16] ...\\wt[16] ... Ta-da!\\se[Battle ball drop]\1"))
+          pbMessage(_INTL("{1} forgot how to use {2}.\\nAnd...\1",pkmn.name,oldMoveName))
+          pbMessage(_INTL("\\se[]{1} learned {2}!\\se[Pkmn move learnt]",pkmn.name,newMoveName))
+        else
+          pkmn.pbDeleteMoveAtIndex(idxMoveToReplace)
+          pbMessage(_INTL("{1} forgot {2}...",pkmn.name,oldMoveName))
+          pkmn.pbLearnMove(:THUNDERWAVE) if pkmn.numMoves==0
+        end
+      elsif newMove && newMove>0
+        pbLearnMove(pkmn,newMove,true)
+      end
+    end
+},
+"getForm" => proc { |pkmn|
+  next if pkmn.formSimple>=2
+  mapPos = pbGetMetadata($game_map.map_id,MetadataMapPosition)
+  next 1 if mapPos && mapPos[0]==1   # Tiall region
+  next 0
+}})
+
 
 MultipleForms.register(:UNOWN,{
   "getFormOnCreation" => proc { |pkmn|
@@ -358,6 +412,7 @@ MultipleForms.register(:ARCEUS,{
        18 => [:PIXIEPLATE,:FAIRIUMZ]
     }
     ret = 0
+    next 0 if !pkmn.hasItem?
     typeArray.each do |f, items|
       for item in items
         next if !pkmn.hasItem?(item)
@@ -378,7 +433,8 @@ MultipleForms.register(:BASCULIN,{
 
 MultipleForms.register(:DARMANITAN,{
   "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
-    next 0
+    next 0 if pkmn.form==2
+    next 1 if pkmn.form==3
   }
 })
 
@@ -662,13 +718,87 @@ MultipleForms.register(:NECROZMA,{
   }
 })
 
+MultipleForms.register(:TOXEL,{
+  "getFormOnCreation" => proc { |pkmn|
+   natures=[1,5,7,10,12,15,16,17,18,20,21,23]
+   lowkey=false
+   nature=pkmn.nature
+   lowkey = true if natures.include?(nature)
+   next 1 if lowkey
+   next 0
+  },
+})
+
+MultipleForms.copy(:TOXEL,:TOXTRICITY)
+
+MultipleForms.register(:EISCUE,{
+  "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
+    next 0 if pkmn.fainted? || endBattle
+  }
+})
+
+MultipleForms.register(:INDEEDEE,{
+  "getForm" => proc { |pkmn|
+    next pkmn.gender
+  }
+})
+
+MultipleForms.register(:ZAMAZENTA,{
+  "getForm" => proc { |pkmn|
+    next 1 if isConst?(pkmn.item,PBItems,:RUSTEDSHIELD)
+    next 0
+  }
+})
+
+MultipleForms.register(:ZACIAN,{
+  "getForm" => proc { |pkmn|
+    next 1 if isConst?(pkmn.item,PBItems,:RUSTEDSWORD)
+    next 0
+  }
+})
+
+MultipleForms.register(:MORPEKO,{
+  "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
+    next 0 if pkmn.fainted? || endBattle
+  }
+})
+
+MultipleForms.register(:CRAMORANT,{
+  "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
+    next 0
+  }
+})
+
+MultipleForms.register(:CALYREX,{
+  "onSetForm" => proc { |pkmn,form,oldForm|
+    case form
+    when 0   # Normal
+      exclusiveMoves = [:TACKLE, :TAILWHIP, :DOUBLEKICK, :AVALANCHE, :HEX, :STOMP, :TORMENT, :CONFUSERAY,
+         :MIST, :HAZE, :ICICLECRASH, :SHADOWBALL, :TAKEDOWN, :IRONDEFENSE, :AGILITY, :THRASH, :TAUNT, :DISABLE,
+          :DOUBLEEDGE, :SWORDSDANCE, :NASTYPLOT, :GLACIALLANCE, :ASTRALBARRAGE].map! { |name| getID(PBMoves, name) }
+      pkmn.moves.each_with_index do |move,i|
+        next if !move || move.id==0
+        if exclusiveMoves.include?(move.id)
+          pbMessage(_INTL("{1} forgot {2}...",pkmn.name,PBMoves.getName(move.id)))
+          pkmn.pbDeleteMoveAtIndex(i)
+        end
+      end
+      pkmn.pbLearnMove(:CONFUSION) if pkmn.numMoves==0
+    when 1   # Ice Rider
+      pbLearnMove(pkmn,getID(PBMoves,:GLACIALLANCE),true) if hasConst?(PBMoves,:GLACIALLANCE)
+    when 2   # Black
+      pbLearnMove(pkmn,getID(PBMoves,:ASTRALBARRAGE),true) if hasConst?(PBMoves,:ASTRALBARRAGE)
+    end
+  }
+})
+
 #===============================================================================
 # Alolan forms
 #===============================================================================
 
 # These species don't have visually different Alolan forms, but they need to
 # evolve into different forms depending on the location where they evolved.
-MultipleForms.register(:PIKACHU,{
+MultipleForms.register(:EXEGGCUTE,{
   "getForm" => proc { |pkmn|
     next if pkmn.formSimple>=2
     mapPos = pbGetMetadata($game_map.map_id,MetadataMapPosition)
@@ -677,4 +807,21 @@ MultipleForms.register(:PIKACHU,{
   }
 })
 
-MultipleForms.copy(:PIKACHU,:EXEGGCUTE,:CUBONE)
+MultipleForms.copy(:EXEGGCUTE,:CUBONE)
+
+#===============================================================================
+# Galarian forms
+#===============================================================================
+
+# These species don't have visually different Galarian forms, but they need to
+# evolve into different forms depending on the location where they evolved.
+MultipleForms.register(:KOFFING,{
+  "getForm" => proc { |pkmn|
+    next if pkmn.formSimple>=2
+    mapPos = pbGetMetadata($game_map.map_id,MetadataMapPosition)
+    next 1 if mapPos && mapPos[0]==1   # Tiall region
+    next 0
+  }
+})
+
+MultipleForms.copy(:KOFFING,:MIMEJR)

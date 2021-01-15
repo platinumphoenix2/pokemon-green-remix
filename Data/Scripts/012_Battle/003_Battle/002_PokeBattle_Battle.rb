@@ -666,10 +666,12 @@ class PokeBattle_Battle
     when PBWeather::HeavyRain;   pbDisplay(_INTL("A heavy rain began to fall!"))
     when PBWeather::StrongWinds; pbDisplay(_INTL("Mysterious strong winds are protecting Flying-type Pokémon!"))
     when PBWeather::ShadowSky;   pbDisplay(_INTL("A shadow sky appeared!"))
+    when PBWeather::Fog;         pbDisplay(_INTL("The fog is deep..."))
     end
     # Check for end of primordial weather, and weather-triggered form changes
     eachBattler { |b| b.pbCheckFormOnWeatherChange }
     pbEndPrimordialWeather
+    pbCalculatePriority(true) if DYNAMIC_PRIORITY
   end
 
   def pbEndPrimordialWeather
@@ -698,6 +700,7 @@ class PokeBattle_Battle
       # Start up the default weather
       pbStartWeather(nil,@field.defaultWeather) if @field.defaultWeather!=PBWeather::None
     end
+    pbCalculatePriority(true) if DYNAMIC_PRIORITY
   end
 
   def defaultTerrain=(value)
@@ -727,8 +730,12 @@ class PokeBattle_Battle
     when PBBattleTerrains::Psychic
       pbDisplay(_INTL("The battlefield got weird!"))
     end
+    pbCalculatePriority(true) if DYNAMIC_PRIORITY
     # Check for terrain seeds that boost stats in a terrain
-    eachBattler { |b| b.pbItemTerrainStatBoostCheck }
+    eachBattler { |b|
+	  b.pbCheckFormOnTerrainChange
+	  b.pbItemTerrainStatBoostCheck
+	}
   end
 
   #=============================================================================
@@ -762,10 +769,10 @@ class PokeBattle_Battle
     @scene.pbCommonAnimation(name,user,targets) if @showAnims
   end
 
-  def pbShowAbilitySplash(battler,delay=false,logTrigger=true)
+  def pbShowAbilitySplash(battler,delay=false,logTrigger=true,ability=nil)
     PBDebug.log("[Ability triggered] #{battler.pbThis}'s #{battler.abilityName}") if logTrigger
     return if !PokeBattle_SceneConstants::USE_ABILITY_SPLASH
-    @scene.pbShowAbilitySplash(battler)
+    @scene.pbShowAbilitySplash(battler,ability)
     if delay
       Graphics.frame_rate.times { @scene.pbUpdate }   # 1 second
     end
