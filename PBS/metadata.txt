@@ -11,14 +11,12 @@ Home = 43,7,7,6
 WildBattleBGM = 209 - Vs. Wild Kanto Pokémon.mp3
 #-------------------------------
 [389]
-# Pallet Town
 SnapEdges = false
 MapPosition = 0,6,15
 Outdoor = true
 ShowArea = true
 #-------------------------------
 [390]
-# Pallet Town
 SnapEdges = false
 Bicycle = false
 MapPosition = 0,10,3

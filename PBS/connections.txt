@@ -1,1 +1,8 @@
-﻿
+﻿# See the documentation on the wiki to learn how to edit this file.
+#-------------------------------
+# Route 1 (13) - Pallet Town (5)
+13,South,0,5,North,0
+# Pallet Town (8) - Pallet Town (5)
+8,North,0,5,South,0
+# Viridian City (9) - Route 1 (13)
+9,South,18,13,North,0

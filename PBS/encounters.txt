@@ -1,6 +1,6 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-003 # Route 1
+003 # Cities
 25,10,10
 Land
     PIDGEY,2,5
