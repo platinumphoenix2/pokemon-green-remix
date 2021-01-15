@@ -1,5 +1,4 @@
-﻿# See the documentation on the wiki to learn how to edit this file.
-#-------------------------------
+﻿#-------------------------------
 CHERIBERRY = 3,15,2,5
 CHESTOBERRY = 3,15,2,5
 PECHABERRY = 3,15,2,5
