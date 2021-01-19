@@ -2,23 +2,57 @@
 #-------------------------------
 [000]
 PlayerA = POKEMONTRAINER_Red,trchar000,!GenericBike,!GenericSurf,!GenericRun,!GenericDive,!GenericFish,!GenericSurf
-TrainerVictoryME = Victory - Trainer.mid
-WildVictoryME = Victory - Wild Pokemon.mid
-TrainerBattleBGM = 210 - Vs. Kanto Trainer.mp3
-SurfBGM = 008 - Surfing.mp3
-BicycleBGM = 007 - Bicycle.mp3
-Home = 43,7,7,6
-WildBattleBGM = 209 - Vs. Wild Kanto Pokémon.mp3
+TrainerVictoryME = VictoryTrainer.mp3
+WildVictoryME = VictoryWild.mp3
+TrainerBattleBGM = TrainerDefault.mp3
+SurfBGM = GenericSurf.mp3
+BicycleBGM = GenericBicycle
+Home = 6,8,25,6
+WildBattleBGM = PokemonWild.mp3
 #-------------------------------
-[389]
-SnapEdges = false
-MapPosition = 0,6,15
+[005]
+# Pallet Town
 Outdoor = true
+Environment = ForestGrass
 ShowArea = true
 #-------------------------------
-[390]
-SnapEdges = false
-Bicycle = false
-MapPosition = 0,10,3
+[008]
+# Pallet Town
+Outdoor = true
+Environment = ForestGrass
+ShowArea = true
+#-------------------------------
+[009]
+# Viridian City
+Outdoor = true
+Environment = ForestGrass
+ShowArea = true
+#-------------------------------
+[012]
+# Pewter City
+Outdoor = true
+Environment = ForestGrass
+ShowArea = true
+#-------------------------------
+[013]
+# Route 1
+Outdoor = true
+Environment = ForestGrass
+ShowArea = true
+#-------------------------------
+[014]
+# Wrangle Forest
+Outdoor = true
+Environment = ForestGrass
+ShowArea = true
+#-------------------------------
+[015]
+# Wrangle Forest - Right Filler
+#-------------------------------
+[016]
+# Wrangle Forest - Left Filler
+#-------------------------------
+[017]
+# Wrangle Forest
 Outdoor = true
 ShowArea = true

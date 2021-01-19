@@ -101,3 +101,6 @@
 99,MAGICIAN,Magician,100,TrainerShadowAdmin,VictoryTrainer,MEShadow,Male,255,
 100,WANDERING,Wandering,100,BuildingPerformance Tower-Alt,!Blank,MEEvil,Male,255,
 101,RIVAL,Rival,100,TrainerDefault,VictoryTrainer,,Male,255,
+102,BURGLAR,Burglar,100,,VictoryTrainer,MEPolice,Male,255,
+103,ROCKET_M,Team Rocket,100,,VictoryTrainer,MEPolice,Male,255,
+104,ROCKET_F,Team Rocket,100,,VictoryTrainer,MEPolice,Female,255,

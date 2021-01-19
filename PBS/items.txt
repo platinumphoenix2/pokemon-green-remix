@@ -826,11 +826,11 @@
 800,MAXPLUMAGE,Max Plumage,Max Plumages,2,4000,"A bundle of six distinctly colored feathers. Increases each base stat of a Pokémon by 1 point.",1,0,0,
 801,MAXSOUP,Max Soup,Max Soups,2,8000,"A soup that packs a huge kick. Certain Pokémon that consume it may be given the ability to Gigantamax.",1,0,0,
 #--------------------------------
-802,PARCEL,Parcel,Parcels,8,0,"This package belongs to Pro.Oak .",0,0,6,
-803,SSTICKET,S.S Ticket,S.S Tickets,8,0,"This Ticket for the S.S Ship.",0,0,6,
-804,BIKEVOUCHER,Bike Voucher,Bike Vouchers,8,0,"This voucher for a free bike.",0,0,6,
+802,PARCEL,Parcel,Parcels,8,0,"This package belongs to Prof. Oak .",0,0,6,
+803,SSTICKET,S.S Ticket,S.S Tickets,8,0,"This ticket is for the S.S Anne Ship.",0,0,6,
+804,BIKEVOUCHER,Bike Voucher,Bike Vouchers,8,0,"This voucher is for a free bike.",0,0,6,
 805,LIFTKEY,Lift Key,Lift Keys,8,0,"This key is for an elevator.",0,0,6,
-806,CARDKEY,Card Key,Card Keys,8,0,"This key is for an Silph Co employies only.",0,0,6,
+806,CARDKEY,Card Key,Card Keys,8,0,"This key is for Silph Co employies only.",0,0,6,
 807,GOLDTEETH,Gold Teeth,Gold Theeths,8,0,"These teeth belong to someone.",0,0,6,
 #--------------------------------
 808,DELTASTONE,Delta Stone,Detla Stone,2,1000,"A stone that looks very weird and might have odd effects on a pokemon.",1,0,0,
@@ -915,3 +915,38 @@
 886,SOLGANIUMZ2,Solganium-Z,,1,0,"This is a crystallized form of Z-Power. It upgrades a Sunsteel Strike by Solgaleo to a Z-Move.",0,0,13,
 887,ULTRANECROZIUMZ,Ultra-Necrozium-Z,,8,0,"It converts Z-Power into crystals that upgrades a Photon Geyser by Ultra-Necrozma to an exclusive Z-Move.",5,0,14,
 888,ULTRANECROZIUMZ2,Ultra-Necrozium-Z,,1,0,"This is a crystallized form of Z-Power. It upgrades a Photon Geyser by Ultra-Necrozma to a Z-Move.",0,0,13,
+#-------------------------------- HM Items
+889,SHEARS,Shears,Shears,8,0,"Shears that can cut the thickest of small trees.",2,0,6,
+890,IRONSHEARS,Iron Shears,Iron Shears,8,0,"Shears that can cut the thickest of small trees.",2,0,6,
+891,GOLDENSHEARS,Golden Shears,Golden Shears,8,0,"Shears that can cut the thickest of small trees.",2,0,6,
+892,PICKAXE,Pickaxe,Pickaxes,8,0,"A pickaxe that can crush the strongest of rocks!",2,0,6,
+893,IRONPICKAXE,Iron Pickaxe,Iron Pickaxes,8,0,"A pickaxe that can crush the strongest of rocks!",2,0,6,
+894,GOLDENPICKAXE,Golden Pickaxe,Gold Pickaxes,8,0,"A pickaxe that can crush the strongest of rocks!",2,0,6,
+895,POWERDRINK,Power Drink, Power Drink,8,0,"An energy drink that makes you Hercules!",2,0,6,
+896,FLOATEE,Floatee,Floatees,8,0,"A floatee that'll help you surf the 7 seas!",2,0,6,
+897,LENSOFTRUTH,Lens of Truth,Lens of Truth,8,0,"A pecuilar item that can show invisible items.",2,0,6,
+#-------------------------------- New Berries & Shakes
+898,LUSTBERRY,Lust Berry,Lust Berries,1,20,"It can help Pokemon feel relaxed and comfortable with others.",0,0,5,
+899,DWINDLEBERRY,Dwindle Berry,Dwindle Berries,1,20,"Reduces the damage taken by a super-effective attack by half.",0,0,5,
+900,ORANSHAKE,Oran Shake,Oran Shakes,2,0,"Restores a Pokemon's HP by 100.",1,1,0
+901,SITRUSSHAKE,Sitrus Shake,Sitrus Shakes,2,0,"Restores a Pokemon's HP by 200.",1,1,0
+#-------------------------------- Loot Boxes
+902,ASSISTBOX,Assist Box,Assist Boxes,1,18000,"A box containing a random holdable item.",2,0,0,
+903,EVOLIBOX,Evoli Box,Evoli Boxes,1,6500,"A box containing a Pokemon-specific evolutionary item.",2,0,0,
+904,LOOTBOX,Loot Box,Loot Boxes,1,0,"Contains a random item.",2,0,0
+905,BERRYBAG,Berry Bag,Berry Bags,1,2000,"A bag that contains a variety of random berries.",2,0,0,
+906,TMORB,TM Orb,TM Orbs,1,6000,"An orb containing a random TM.",2,0,0,
+907,LUCKORB,Luck Orb,Luck Orbs,1,10000,"A mysterious orb.",2,0,0,
+#-------------------------------- Baits
+908,GREATBAIT,Great Bait, Great Baits,1,500,"For use in a bait trap to attract Pokemon.",0,0,0,
+909,ULTRABAIT,Ultra Bait, Ultra Baits,1,1500,"For use in a bait trap to attract uncommon Pokemon.",0,0,0,
+910,MASTERBAIT,Master Bait, Master Baits,1,3000,"For use in a bait trap to attract rare Pokemon.",0,0,0,
+#-------------------------------- Crafting Ingredients
+911,IRONINGOT,Iron Ingot,Iron Ingots,1,2500,"An iron ingot.",0,0,0,
+912,STICK,Stick,Sticks,1,100,"A stick.",0,0,0,
+913,ROCK,Rock,Rocks,1,100,"A rock.",0,0,0,
+914,HEMPFIBER,Hemp Fiber,Hemp Fibers,0,300,"A hemp fiber.",0,0,0,
+915,SNAILSHELL,Snail Shell,Snail Shells,0,300,"A snail shell.",0,0,0,
+916,BATSWING,Bat's Wing,Bat's Wings,0,300,"A bat's wing.",0,0,0,
+#-------------------------------- New Held Items
+917,STURDYSHELL,Sturdy Shell,Sturdy Shells,0,1000,"A King's Sturdy Shell.",0,0,0,
