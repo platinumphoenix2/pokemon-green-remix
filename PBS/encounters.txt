@@ -31,3 +31,19 @@ Land
     BULBASAUR,5
     BULBASAUR,5
     BULBASAUR,5
+#-------------------------------
+014 # Wrangle Forest
+25,10,10
+Land
+    SHROOM,3,5
+    SHROOM,5
+    SHROOM,5
+    SHROOM,5
+    SHROOM,5
+    SHROOM,5
+    SHROOM,5
+    SHROOM,5
+    SHROOM,5
+    SHROOM,5
+    SHROOM,5
+    SHROOM,5

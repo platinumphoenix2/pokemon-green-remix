@@ -56,3 +56,10 @@ ShowArea = true
 # Wrangle Forest
 Outdoor = true
 ShowArea = true
+#-------------------------------
+[029]
+# Viridian City Well
+Outdoor = false
+Environment = ForestGrass
+ShowArea = false
+DarkMap = true

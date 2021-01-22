@@ -3,3 +3,57 @@
 LoseText = "You caught me off guard!"
 Pokemon = EEVEE,5
 #-------------------------------
+[BUGCATCHER,Charlie]
+LoseText = "METAPOD!"
+Pokemon = METAPOD,10
+#-------------------------------
+[BUGCATCHER,Louie]
+LoseText = "Metapod!"
+Pokemon = PARAS,10
+#-------------------------------
+[BUGCATCHER,Alph]
+LoseText = "Metapod!"
+Pokemon = NINCADA,11
+#-------------------------------
+[BUGCATCHER,Smallimar]
+LoseText = "Metapod!"
+Pokemon = METAPOD,11
+Pokemon = BLIPBUG,11
+#-------------------------------
+[BUGCATCHER,Olimar]
+LoseText = "Metapod!"
+Pokemon = PARAS,11
+Pokemon = NINCADA,12
+#-------------------------------
+[PICNICKER,Bea]
+LoseText = "Pikachu!"
+Pokemon = PIKACHU,12
+#-------------------------------
+[PICNICKER,Brittany]
+LoseText = "SEWADDLE!"
+Pokemon = SEWADDLE,12
+#-------------------------------
+[HIKER,Patrick]
+LoseText = "Yikes!"
+Pokemon = GEODUDE,13
+#-------------------------------
+[HIKER,Eugene]
+LoseText = "Yikes!"
+Pokemon = GEODUDE,13
+Pokemon = GEODUDE,13
+#-------------------------------
+[HIKER,Sheldon]
+LoseText = "Yikes!"
+Pokemon = GEODUDE,13
+Pokemon = GEODUDE,14
+#-------------------------------
+[SCIENTIST_F,Sandy]
+LoseText = "Yikes!"
+Pokemon = GEODUDE,15
+Pokemon = MAGNEMITE,16
+#-------------------------------
+[GYMLEADER_BROCK,Brock]
+LoseText = "My ONIX!"
+Pokemon = GEODUDE,18
+Pokemon = ONIX,18
+#-------------------------------

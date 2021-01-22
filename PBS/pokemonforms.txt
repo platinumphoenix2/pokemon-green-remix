@@ -511,6 +511,11 @@ Pokedex = The energy of Mega Evolution awakened it. It sinks into another dimens
 BattlerPlayerY = 28
 BattlerEnemyY = 21
 #-------------------------------
+[ONIX,1]
+FormName = Mutated
+BaseStats = 40,45,180,70,30,70
+Abilities = SANDSPIT
+#-------------------------------
 [EXEGGUTOR,1]
 FormName = Alolan
 Type1 = GRASS
