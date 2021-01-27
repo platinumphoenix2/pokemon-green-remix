@@ -1,49 +1,47 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
-#-------------------------------
-003 # Cities
-25,10,10
-Land
-    PIDGEY,2,5
-    PIDGEY,2,5
-    PIDGEY,2,5
-    RATTATA,2,4
-    RATTATA,2,4
-    RATTATA,2,4
-    RATTATA,2,4
-    RATTATA,2,4
-    RATTATA,2,4
-    RATTATA,2,4
-    RATTATA,2,4
-    RATTATA,2,4
+# LAND: 15, 15, 15, 12, 12, 12, 10, 9
 #-------------------------------
 013 # Route 1
-25,10,10
+20,10,10
 Land
-    CHARMANDER,3,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
-    BULBASAUR,5
+    PIDGEY,5
+    RATTATA,5
+    SPEAROW,5
+	SENTRET,5
+    ZIGZAGOON,5
+	PATRAT,5
+    YUNGOOS,5
+    STARLY,5
+LandNight
+	RATTATA,5
+	POOCHYENA,5
+	SPEAROW,5
+	SENTRET,5
+	ZIGZAGOON,5
+	PATRAT,5
+	YUNGOOS,5
+	STARLY,5
 #-------------------------------
 014 # Wrangle Forest
-25,10,10
+20,10,10
 Land
-    SHROOM,3,5
+    METAPOD,5
+    KAKUNA,5
+    ODDISH,5
+    YANMA,5
+    SEEDOT,5
+    BUDEW,5
+    SEWADDLE,5
     SHROOM,5
-    SHROOM,5
-    SHROOM,5
-    SHROOM,5
-    SHROOM,5
-    SHROOM,5
-    SHROOM,5
-    SHROOM,5
-    SHROOM,5
-    SHROOM,5
+#-------------------------------
+017 # Wrangle Forest
+20,10,10
+Land
+    METAPOD,5
+    KAKUNA,5
+    ODDISH,5
+    YANMA,5
+    SEEDOT,5
+    BUDEW,5
+    SEWADDLE,5
     SHROOM,5

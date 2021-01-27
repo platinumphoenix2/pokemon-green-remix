@@ -63,3 +63,9 @@ Outdoor = false
 Environment = ForestGrass
 ShowArea = false
 DarkMap = true
+#-------------------------------
+[030]
+# Pewter City Rocky Dungeon
+Outdoor = false
+Environment = ForestGrass
+Dungeon = true

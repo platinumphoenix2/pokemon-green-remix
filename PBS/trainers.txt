@@ -17,10 +17,9 @@ Pokemon = NINCADA,11
 #-------------------------------
 [BUGCATCHER,Smallimar]
 LoseText = "Metapod!"
-Pokemon = METAPOD,11
 Pokemon = BLIPBUG,11
 #-------------------------------
-[BUGCATCHER,Olimar]
+[CAMPER,Olimar]
 LoseText = "Metapod!"
 Pokemon = PARAS,11
 Pokemon = NINCADA,12

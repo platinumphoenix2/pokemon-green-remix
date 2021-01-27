@@ -58,7 +58,8 @@ Height = 1.4
 Weight = 40.5
 Pokedex = Its legs have become poison stingers. It stabs its prey repeatedly with the stingers on its limbs, dealing the final blow with the stinger on its rear.
 BattlerPlayerY = 19
-BattlerEnemyY = 13
+BattlerEnemyY = 6
+BattlerShadowSize = 2
 #-------------------------------
 [PIDGEOT,1]
 FormName = Mega Pidgeot
@@ -349,6 +350,7 @@ HiddenAbility = TRACE
 Height = 1.2
 Pokedex = Having traded away its muscles, Alakazam's true power has been unleashed. With its psychic powers, it can foresee all things.
 BattlerPlayerY = 9
+BattlerEnemyY = 12
 #-------------------------------
 [GEODUDE,1]
 FormName = Alolan
@@ -624,7 +626,7 @@ Height = 2.1
 Weight = 79.0
 Pokedex = When it Mega Evolves, it becomes more vicious than ever before. Some say that's because its excess of power is causing it pain.
 BattlerPlayerY = 21
-BattlerEnemyY = 19
+BattlerEnemyY = -3
 #-------------------------------
 [ARTICUNO,1]
 FormName = Galarian
@@ -633,8 +635,10 @@ Type2 = FLYING
 BaseStats = 90,85,85,95,125,100
 Abilities = COMPETITIVE
 Moves = 1,GUST,1,PSYCHOSHIFT,5,CONFUSION,10,REFLECT,15,HYPNOSIS,20,AGILITY,25,ANCIENTPOWER,30,TAILWIND,35,PSYCHOCUT,40,RECOVER,45,FREEZINGGLARE,50,DREAMEATER,55,HURRICANE,60,MINDREADER,65,FUTURESIGHT,70,TRICKROOM
-BattlerPlayerY = 8
+BattlerPlayerY = 11
 BattlerEnemyY = 12
+BattlerShadowX = 7
+BattlerShadowSize = 1
 #-------------------------------
 [ZAPDOS,1]
 FormName = Galarian
@@ -888,7 +892,6 @@ Weight = 0.5
 Color = White
 Pokedex = Sudden climate change wiped out this ancient kind of Corsola. This Pokémon absorbs others' life-force through its branches.
 BattlerPlayerY = 25
-BattlerEnemyY = 29
 Evolutions = CURSOLA,Level,38
 #-------------------------------
 [HOUNDOOM,1]
@@ -933,7 +936,7 @@ MegaStone = BLAZIKENITE
 BaseStats = 80,160,80,100,130,80
 Abilities = SPEEDBOOST
 BattlerPlayerY = 3
-BattlerEnemyY = 4
+BattlerEnemyY = 2
 #-------------------------------
 [SWAMPERT,1]
 FormName = Mega Swampert
@@ -1008,8 +1011,8 @@ Abilities = FILTER
 HiddenAbility = FILTER
 Height = 2.2
 Weight = 395.0
-BattlerPlayerY = 6
-BattlerEnemyY = 9
+BattlerPlayerY = 15
+BattlerEnemyY = 11
 #-------------------------------
 [MEDICHAM,1]
 FormName = Mega Medicham
@@ -1064,7 +1067,8 @@ Abilities = PIXILATE
 HiddenAbility = PIXILATE
 Height = 1.5
 BattlerPlayerY = 9
-BattlerEnemyY = 13
+BattlerEnemyY = 5
+BattlerShadowSize = 3
 #-------------------------------
 [CASTFORM,1]
 FormName = Sunny Form
@@ -1072,7 +1076,8 @@ Type1 = FIRE
 Color = Red
 Pokedex = This is the form Castform takes on the brightest of days. Its skin is unexpectedly hot to the touch, so approach with care.
 BattlerPlayerY = 0
-BattlerEnemyY = 21
+BattlerEnemyY = 15
+BattlerShadowX = 0
 #-------------------------------
 [CASTFORM,2]
 FormName = Rainy Form
@@ -1080,7 +1085,8 @@ Type1 = WATER
 Color = Blue
 Pokedex = This is the form Castform takes when soaked with rain. When its body is compressed, water will seep out as if from a sponge.
 BattlerPlayerY = 0
-BattlerEnemyY = 21
+BattlerEnemyY = 15
+BattlerShadowX = 0
 #-------------------------------
 [CASTFORM,3]
 FormName = Snowy Form
@@ -1088,7 +1094,8 @@ Type1 = ICE
 Color = White
 Pokedex = This is the form Castform takes when covered in snow. Its body becomes an ice-like material, with a temperature near -5 degrees Celsius.
 BattlerPlayerY = 0
-BattlerEnemyY = 20
+BattlerEnemyY = 15
+BattlerShadowX = 0
 #-------------------------------
 [BANETTE,1]
 FormName = Mega Banette
@@ -1100,7 +1107,7 @@ Height = 1.2
 Weight = 13.0
 Pokedex = Extraordinary energy amplifies its cursing power to such an extent that it can't help but curse its own Trainer.
 BattlerPlayerY = 15
-BattlerEnemyY = 21
+BattlerEnemyY = 18
 #-------------------------------
 [ABSOL,1]
 FormName = Mega Absol
@@ -1224,14 +1231,12 @@ Moves = 1,LEER,1,WRAP,7,NIGHTSHADE,13,DOUBLETEAM,19,KNOCKOFF,25,PURSUIT,31,PSYCH
 [BURMY,1]
 FormName = Sandy Cloak
 Color = Brown
-BattlerPlayerY = 10
-BattlerEnemyY = 22
+BattlerPlayerY = 11
 #-------------------------------
 [BURMY,2]
 FormName = Trash Cloak
 Color = Red
 BattlerPlayerY = 2
-BattlerEnemyY = 18
 #-------------------------------
 [WORMADAM,1]
 FormName = Sandy Cloak
@@ -1308,8 +1313,7 @@ HiddenAbility = SNOWWARNING
 Height = 2.7
 Weight = 185.0
 BattlerPlayerY = 16
-BattlerEnemyY = 14
-BattlerShadowSize = 2
+BattlerEnemyY = 15
 #-------------------------------
 [GALLADE,1]
 FormName = Mega Gallade
@@ -1475,7 +1479,8 @@ FormName = Blue-Striped
 Abilities = ROCKHEAD,ADAPTABILITY
 Pokedex = Even Basculin, which devours everything it can with its huge jaws, is nothing more than food to organisms stronger than itself.
 WildItemUncommon = DEEPSEASCALE
-BattlerEnemyY = 37
+BattlerEnemyY = 24
+BattlerShadowSize = 2
 #-------------------------------
 [DARUMAKA,1]
 FormName = Galarian
@@ -1833,7 +1838,7 @@ FormName = Blade Forme
 BaseStats = 60,150,50,60,150,50
 EffortPoints = 0,2,0,0,1,0
 BattlerPlayerY = 13
-BattlerEnemyY = 13
+BattlerEnemyY = 5
 #-------------------------------
 [PUMPKABOO,1]
 FormName = Average Size
@@ -2149,8 +2154,8 @@ BattlerEnemyY = 36
 [MIMIKYU,1]
 FormName = Busted Form
 Pokedex = Sad that its true identity may be exposed, Mimikyu will mercilessly seek revenge on any opponent that breaks its neck.
-BattlerPlayerY = 33
-BattlerEnemyY = 38
+BattlerPlayerY = 20
+BattlerEnemyY = 27
 #-------------------------------
 [NECROZMA,1]
 FormName = Dusk Mane
@@ -2208,10 +2213,12 @@ Pokedex = This gorgeous Magearna looks as it did at the time of its invention. I
 [CRAMORANT,1]
 FormName = Gulping Form
 Pokedex = The slightest shock is sometimes enough to get this Pokémon to spit out the Arrokuda lodged in its throat.
+BattlerEnemyY = 16
 #-------------------------------
 [CRAMORANT,2]
 FormName = Gorging Form
 Pokedex = The half-swallowed Pikachu is so startled that it isn't struggling yet, but it's still looking for a chance to strike back.
+BattlerEnemyY = 16
 #-------------------------------
 [TOXTRICITY,1]
 FormName = Low Key Form
