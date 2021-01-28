@@ -1,7 +1,11 @@
 ﻿#------------------------------- PALLET TOWN: LAB
 [RIVAL,Gary,1]
 LoseText = "You caught me off guard!"
-Pokemon = EEVEE,5
+Pokemon = EEVEE,10
+#-------------------------------
+[YOUNGSTER,Steve]
+LoseText = "???"
+Pokemon = RATTATA,10
 #-------------------------------
 [BUGCATCHER,Charlie]
 LoseText = "METAPOD!"

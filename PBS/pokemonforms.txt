@@ -365,7 +365,7 @@ Color = Gray
 Pokedex = Geodude compete against each other with headbutts. The iron sand on their heads will stick to whichever one has stronger magnetism.
 WildItemUncommon = CELLBATTERY
 BattlerPlayerY = 33
-BattlerEnemyY = 35
+BattlerEnemyY = 15
 #-------------------------------
 [GRAVELER,1]
 FormName = Alolan
@@ -470,7 +470,6 @@ EggMoves = COUNTER,COVET,CURSE,DOUBLEEDGE,FEINT,FLAIL,NIGHTSLASH,QUICKATTACK,QUI
 Weight = 42.0
 Pokedex = The stalks of leeks are thicker and longer in the Galar region. Farfetch'd that adapted to these stalks took on a unique form.
 WildItemCommon = LEEK
-BattlerPlayerY = 22
 BattlerEnemyY = 28
 Evolutions = SIRFETCHD,CriticalHits,3
 #-------------------------------
@@ -635,7 +634,7 @@ Type2 = FLYING
 BaseStats = 90,85,85,95,125,100
 Abilities = COMPETITIVE
 Moves = 1,GUST,1,PSYCHOSHIFT,5,CONFUSION,10,REFLECT,15,HYPNOSIS,20,AGILITY,25,ANCIENTPOWER,30,TAILWIND,35,PSYCHOCUT,40,RECOVER,45,FREEZINGGLARE,50,DREAMEATER,55,HURRICANE,60,MINDREADER,65,FUTURESIGHT,70,TRICKROOM
-BattlerPlayerY = 11
+BattlerPlayerY = 16
 BattlerEnemyY = 12
 BattlerShadowX = 7
 BattlerShadowSize = 1
@@ -891,7 +890,6 @@ EggMoves = CONFUSERAY,DESTINYBOND,HAZE,HEADSMASH,NATUREPOWER,WATERPULSE
 Weight = 0.5
 Color = White
 Pokedex = Sudden climate change wiped out this ancient kind of Corsola. This Pokémon absorbs others' life-force through its branches.
-BattlerPlayerY = 25
 Evolutions = CURSOLA,Level,38
 #-------------------------------
 [HOUNDOOM,1]
@@ -1213,6 +1211,7 @@ FormName = Attack Forme
 BaseStats = 50,180,20,150,180,20
 EffortPoints = 0,2,0,0,1,0
 Moves = 1,LEER,1,WRAP,7,NIGHTSHADE,13,TELEPORT,19,TAUNT,25,PURSUIT,31,PSYCHIC,37,SUPERPOWER,43,PSYCHOSHIFT,49,ZENHEADBUTT,55,COSMICPOWER,61,ZAPCANNON,67,PSYCHOBOOST,73,HYPERBEAM
+BattlerPlayerY = 20
 BattlerEnemyY = 8
 #-------------------------------
 [DEOXYS,2]
@@ -1220,13 +1219,16 @@ FormName = Defense Forme
 BaseStats = 50,70,160,90,70,160
 EffortPoints = 0,0,2,0,0,1
 Moves = 1,LEER,1,WRAP,7,NIGHTSHADE,13,TELEPORT,19,KNOCKOFF,25,SPIKES,31,PSYCHIC,37,SNATCH,43,PSYCHOSHIFT,49,ZENHEADBUTT,55,IRONDEFENSE,55,AMNESIA,61,RECOVER,67,PSYCHOBOOST,73,COUNTER,73,MIRRORCOAT
-BattlerEnemyY = 8
+BattlerPlayerY = 20
+BattlerEnemyY = 12
 #-------------------------------
 [DEOXYS,3]
 FormName = Speed Forme
 BaseStats = 50,95,90,180,95,90
 EffortPoints = 0,0,0,3,0,0
 Moves = 1,LEER,1,WRAP,7,NIGHTSHADE,13,DOUBLETEAM,19,KNOCKOFF,25,PURSUIT,31,PSYCHIC,37,SWIFT,43,PSYCHOSHIFT,49,ZENHEADBUTT,55,AGILITY,61,RECOVER,67,PSYCHOBOOST,73,EXTREMESPEED
+BattlerPlayerY = 20
+BattlerEnemyY = 15
 #-------------------------------
 [BURMY,1]
 FormName = Sandy Cloak
@@ -1268,6 +1270,8 @@ Color = Blue
 [GASTRODON,1]
 FormName = East Sea
 Color = Blue
+BattlerPlayerY = 21
+BattlerEnemyY = 24
 #-------------------------------
 [LOPUNNY,1]
 FormName = Mega Lopunny
@@ -1504,8 +1508,8 @@ Height = 1.7
 Weight = 120.0
 Color = White
 Pokedex = Though it has a gentle disposition, it's also very strong. It will quickly freeze the snowball on its head before going for a headbutt.
-BattlerPlayerY = 45
-BattlerEnemyY = 33
+BattlerPlayerY = 24
+BattlerEnemyY = 28
 #-------------------------------
 [DARMANITAN,2]
 FormName = Zen Mode
@@ -1515,6 +1519,7 @@ BaseStats = 105,30,105,55,140,105
 EffortPoints = 0,0,0,0,2,0
 Color = Blue
 Pokedex = When wounded, it stops moving. It goes as still as stone to meditate, sharpening its mind and spirit.
+BattlerPlayerY = 28
 BattlerEnemyY = 33
 #-------------------------------
 [DARMANITAN,3]
@@ -1525,7 +1530,7 @@ BaseStats = 105,160,55,135,30,55
 EffortPoints = 0,0,0,0,2,0
 Color = White
 Pokedex = Darmanitan takes this form when enraged. It won't stop spewing flames until its rage has settled, even if its body starts to melt.
-BattlerPlayerY = 27
+BattlerPlayerY = 24
 BattlerEnemyY = 30
 #-------------------------------
 [YAMASK,1]
@@ -1550,6 +1555,7 @@ Color = Green
 [DEERLING,2]
 FormName = Autumn Form
 Color = Red
+BattlerPlayerY = 27
 #-------------------------------
 [DEERLING,3]
 FormName = Winter Form
@@ -1742,34 +1748,54 @@ FormName = Poké Ball Pattern
 [FLABEBE,1]
 FormName = Yellow Flower
 BattlerPlayerY = 23
+BattlerEnemyY = 27
+BattlerShadowX = 0
+BattlerShadowSize = 0
 #-------------------------------
 [FLABEBE,2]
 FormName = Orange Flower
 BattlerPlayerY = 23
+BattlerEnemyY = 27
+BattlerShadowX = 0
+BattlerShadowSize = 0
 #-------------------------------
 [FLABEBE,3]
 FormName = Blue Flower
 BattlerPlayerY = 23
+BattlerEnemyY = 27
+BattlerShadowX = 0
+BattlerShadowSize = 0
 #-------------------------------
 [FLABEBE,4]
 FormName = White Flower
 BattlerPlayerY = 23
+BattlerEnemyY = 27
+BattlerShadowX = 0
+BattlerShadowSize = 0
 #-------------------------------
 [FLOETTE,1]
 FormName = Yellow Flower
 BattlerPlayerY = 19
+BattlerEnemyY = 23
+BattlerShadowSize = 0
 #-------------------------------
 [FLOETTE,2]
 FormName = Orange Flower
 BattlerPlayerY = 19
+BattlerEnemyY = 23
+BattlerShadowSize = 0
 #-------------------------------
 [FLOETTE,3]
 FormName = Blue Flower
 BattlerPlayerY = 19
+BattlerEnemyY = 23
+BattlerShadowSize = 0
 #-------------------------------
 [FLOETTE,4]
 FormName = White Flower
 BattlerPlayerY = 19
+BattlerEnemyY = 23
+BattlerShadowSize = 0
 #-------------------------------
 [FLOETTE,5]
 FormName = Eternal Flower
@@ -1780,23 +1806,36 @@ Compatibility = Undiscovered
 Pokedex = The flower it's holding can no longer be found blooming anywhere. It's also thought to contain terrifying power.
 BattlerPlayerY = 15
 BattlerEnemyY = 19
+BattlerShadowSize = 0
 Evolutions = FLORGES,None,
 #-------------------------------
 [FLORGES,1]
 FormName = Yellow Flower
 BattlerPlayerY = 12
+BattlerEnemyY = 16
+BattlerShadowX = 0
+BattlerShadowSize = 0
 #-------------------------------
 [FLORGES,2]
 FormName = Orange Flower
 BattlerPlayerY = 12
+BattlerEnemyY = 16
+BattlerShadowX = 0
+BattlerShadowSize = 0
 #-------------------------------
 [FLORGES,3]
 FormName = Blue Flower
 BattlerPlayerY = 12
+BattlerEnemyY = 16
+BattlerShadowX = 0
+BattlerShadowSize = 0
 #-------------------------------
 [FLORGES,4]
 FormName = White Flower
 BattlerPlayerY = 12
+BattlerEnemyY = 16
+BattlerShadowX = 0
+BattlerShadowSize = 0
 #-------------------------------
 [FURFROU,1]
 FormName = Heart Trim
@@ -1933,6 +1972,7 @@ Height = 1.1
 Weight = 27.8
 BattlerPlayerY = 9
 BattlerEnemyY = 4
+BattlerShadowSize = 2
 #-------------------------------
 [HOOPA,1]
 FormName = Hoopa Unbound
@@ -2417,6 +2457,7 @@ FormName = Ribbon - Rainbow Swirl
 FormName = Noice Face
 BaseStats = 75,80,70,130,65,50
 Pokedex = The hair on its head connects to the surface of its brain. When this Pokémon has something on its mind, its hair chills the air around it.
+BattlerEnemyY = 11
 #-------------------------------
 [SINISTEA,1]
 FormName = Antique Form
