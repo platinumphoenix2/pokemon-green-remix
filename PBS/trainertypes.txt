@@ -104,3 +104,4 @@
 102,BURGLAR,Burglar,100,,VictoryTrainer,MEPolice,Male,255,
 103,ROCKET_M,Team Rocket,100,,VictoryTrainer,MEPolice,Male,255,
 104,ROCKET_F,Team Rocket,100,,VictoryTrainer,MEPolice,Female,255,
+105,WORKER,Worker,100,,VictoryTrainer,MEWorker,Male,255,

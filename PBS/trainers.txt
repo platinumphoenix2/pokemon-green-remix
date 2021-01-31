@@ -2,61 +2,75 @@
 [RIVAL,Gary,1]
 LoseText = "You caught me off guard!"
 Pokemon = EEVEE,10
-#-------------------------------
+#------------------------------- Route 1
 [YOUNGSTER,Steve]
 LoseText = "???"
 Pokemon = RATTATA,10
-#-------------------------------
+#------------------------------- Forest
 [BUGCATCHER,Charlie]
 LoseText = "METAPOD!"
 Pokemon = METAPOD,10
-#-------------------------------
+#------------------------------- Forest
 [BUGCATCHER,Louie]
 LoseText = "Metapod!"
 Pokemon = PARAS,10
-#-------------------------------
+#------------------------------- Forest
 [BUGCATCHER,Alph]
 LoseText = "Metapod!"
 Pokemon = NINCADA,11
-#-------------------------------
+#------------------------------- Forest
 [BUGCATCHER,Smallimar]
 LoseText = "Metapod!"
 Pokemon = BLIPBUG,11
-#-------------------------------
+#------------------------------- Forest
 [CAMPER,Olimar]
 LoseText = "Metapod!"
 Pokemon = PARAS,11
 Pokemon = NINCADA,12
-#-------------------------------
+#------------------------------- Forest
 [PICNICKER,Bea]
 LoseText = "Pikachu!"
 Pokemon = PIKACHU,12
-#-------------------------------
+#------------------------------- Forest
 [PICNICKER,Brittany]
 LoseText = "SEWADDLE!"
 Pokemon = SEWADDLE,12
-#-------------------------------
-[HIKER,Patrick]
+#------------------------------- Pewter Mine
+[WORKER,Patrick]
 LoseText = "Yikes!"
 Pokemon = GEODUDE,13
-#-------------------------------
-[HIKER,Eugene]
+#------------------------------- Pewter Mine
+[WORKER,Eugene]
 LoseText = "Yikes!"
 Pokemon = GEODUDE,13
 Pokemon = GEODUDE,13
-#-------------------------------
-[HIKER,Sheldon]
+#------------------------------- Pewter Mine
+[WORKER,Sheldon]
 LoseText = "Yikes!"
 Pokemon = GEODUDE,13
 Pokemon = GEODUDE,14
-#-------------------------------
+#------------------------------- Pewter Mine
 [SCIENTIST_F,Sandy]
 LoseText = "Yikes!"
 Pokemon = GEODUDE,15
 Pokemon = MAGNEMITE,16
-#-------------------------------
+#------------------------------- Pewter Gym
+[WORKER,Sheen]
+LoseText = "Yikes!"
+Pokemon = GEODUDE,13
+#------------------------------- Pewter Gym
+[WORKER,Carl]
+LoseText = "Yikes!"
+Pokemon = GEODUDE,13
+#------------------------------- Pewter Gym
+[WORKER,Jimmy]
+LoseText = "Yikes!"
+Pokemon = GEODUDE,13
+#------------------------------- Pewter Gym
 [GYMLEADER_BROCK,Brock]
 LoseText = "My ONIX!"
-Pokemon = GEODUDE,18
-Pokemon = ONIX,18
+Pokemon = ANORITH,16
+Pokemon = CARKOL,16
+Pokemon = ONIX,17
+    Form = 1
 #-------------------------------

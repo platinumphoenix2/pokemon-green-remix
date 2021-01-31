@@ -936,7 +936,7 @@
 904,LOOTBOX,Loot Box,Loot Boxes,1,0,"Contains a random item.",2,0,0
 905,BERRYBAG,Berry Bag,Berry Bags,1,2000,"A bag that contains a variety of random berries.",2,0,0,
 906,TMORB,TM Orb,TM Orbs,1,6000,"An orb containing a random TM.",2,0,0,
-907,LUCKFLUTE,Luck Flute,Luck Flutes,1,10000,"A mysterious orb.",2,0,0,
+907,LUCKFLUTE,Luck Flute,Luck Flutes,1,10000,"A mysterious flute.",2,0,0,
 #-------------------------------- Baits
 908,GREATBAIT,Great Bait, Great Baits,1,500,"For use in a bait trap to attract Pokemon.",0,0,0,
 909,ULTRABAIT,Ultra Bait, Ultra Baits,1,1500,"For use in a bait trap to attract uncommon Pokemon.",0,0,0,

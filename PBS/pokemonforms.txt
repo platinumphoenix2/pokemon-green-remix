@@ -1,5 +1,19 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
+[BULBASAUR,1]
+#-------------------------------
+[BULBASAUR,2]
+#-------------------------------
+[IVYSAUR,1]
+FormName = Aqua Ivysaur
+Abilities = THICKFAT
+Pokedex = A new form of IVYSAUR!
+#-------------------------------
+[IVYSAUR,2]
+FormName = Pyre Ivysaur
+Abilities = THICKFAT
+Pokedex = A new form of IVYSAUR!
+#-------------------------------
 [VENUSAUR,1]
 FormName = Mega Venusaur
 MegaStone = VENUSAURITE
@@ -379,7 +393,7 @@ Color = Gray
 Pokedex = They eat rocks and often get into a scrap over them. The shock of Graveler smashing together causes a flash of light and a booming noise.
 WildItemUncommon = CELLBATTERY
 BattlerPlayerY = 24
-BattlerEnemyY = 28
+BattlerEnemyY = 26
 #-------------------------------
 [GOLEM,1]
 FormName = Alolan
@@ -613,7 +627,9 @@ HiddenAbility = MOLDBREAKER
 Weight = 305.0
 Pokedex = It zooms out of the water at Mach speeds. Even large ships caught in its path are split cleanly in two!
 BattlerPlayerY = 6
-BattlerEnemyY = 8
+BattlerEnemyY = 0
+BattlerShadowX = 0
+BattlerShadowSize = 2
 #-------------------------------
 [AERODACTYL,1]
 FormName = Mega Aerodactyl
@@ -876,6 +892,7 @@ HiddenAbility = SKILLLINK
 Height = 1.7
 Weight = 62.5
 Pokedex = A tremendous influx of energy builds it up, but when Mega Evolution ends, Heracross is bothered by terrible soreness in its muscles.
+BattlerPlayerX = 0
 BattlerPlayerY = 9
 BattlerEnemyY = 9
 #-------------------------------
@@ -902,6 +919,7 @@ Height = 1.9
 Weight = 49.5
 Pokedex = Its red claws and the tips of its tail are melting from high internal temperatures that are painful to Houndoom itself.
 BattlerPlayerY = 12
+BattlerEnemyX = 1
 BattlerEnemyY = 16
 #-------------------------------
 [TYRANITAR,1]
@@ -1128,7 +1146,7 @@ Height = 2.1
 Weight = 350.2
 Pokedex = It envelops prey in its mouth, freezing them instantly. But its jaw is dislocated, so it's unable to eat them.
 BattlerPlayerY = 21
-BattlerEnemyY = 20
+BattlerEnemyY = 7
 #-------------------------------
 [SALAMENCE,1]
 FormName = Mega Salamence
@@ -1192,8 +1210,8 @@ BaseStats = 100,180,160,90,150,90
 Abilities = DESOLATELAND
 Height = 5.0
 Weight = 999.7
-BattlerPlayerY = 15
-BattlerEnemyY = 11
+BattlerPlayerX = 3
+BattlerEnemyY = 12
 #-------------------------------
 [RAYQUAZA,1]
 FormName = Mega Rayquaza
@@ -1376,7 +1394,9 @@ HiddenAbility = LEVITATE
 Height = 6.9
 Weight = 650.0
 Shape = 2
-BattlerEnemyY = 4
+BattlerPlayerY = 19
+BattlerEnemyY = 1
+BattlerShadowSize = 3
 #-------------------------------
 [SHAYMIN,1]
 FormName = Sky Forme
@@ -1685,6 +1705,7 @@ FormName = Ash-Greninja
 BaseStats = 72,145,67,132,153,71
 Abilities = BATTLEBOND
 HiddenAbility = BATTLEBOND
+BattlerPlayerX = -4
 BattlerPlayerY = 15
 BattlerEnemyY = 19
 #-------------------------------
@@ -1906,7 +1927,7 @@ BattlerEnemyY = 31
 [GOURGEIST,1]
 FormName = Average Size
 BattlerPlayerY = 13
-BattlerEnemyY = 18
+BattlerEnemyY = 14
 #-------------------------------
 [GOURGEIST,2]
 FormName = Large Size
@@ -1914,7 +1935,7 @@ BaseStats = 75,95,122,69,58,75
 Height = 1.1
 Weight = 14.0
 BattlerPlayerY = 11
-BattlerEnemyY = 15
+BattlerEnemyY = 11
 #-------------------------------
 [GOURGEIST,3]
 FormName = Super Size
@@ -1925,7 +1946,7 @@ WildItemCommon = MIRACLESEED
 WildItemUncommon = MIRACLESEED
 WildItemRare = MIRACLESEED
 BattlerPlayerY = 8
-BattlerEnemyY = 12
+BattlerEnemyY = 9
 #-------------------------------
 [XERNEAS,1]
 FormName = Active Mode
@@ -1984,7 +2005,10 @@ Height = 6.5
 Weight = 490.0
 Shape = 6
 BattlerPlayerY = 0
-BattlerEnemyY = 4
+BattlerEnemyX = -7
+BattlerEnemyY = -3
+BattlerShadowX = -3
+BattlerShadowSize = 2
 #-------------------------------
 [ORICORIO,1]
 FormName = Pom-Pom Style

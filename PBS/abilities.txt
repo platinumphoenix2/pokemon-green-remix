@@ -266,3 +266,6 @@
 265,GRIMNEIGH,Grim Neigh,"Boosts Sp. Atk after knocking out any Pokémon."
 266,ASONEICE,As One,"Possesses 2 abilities, Unnerve and Chilling Neigh"
 267,ASONEGHOST,As One,"Possesses 2 abilities, Unnerve and Grim Neigh"
+268,SLIMYGOO,Slimy Goo,"Prevents the foe from fleeing."
+269,HARDSHELL,Hard Shell,"Boosts Defenses."
+270,SONAR,Sonar,"Always lands critical hits."
