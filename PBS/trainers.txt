@@ -1,11 +1,12 @@
 ﻿#------------------------------- PALLET TOWN: LAB
 [RIVAL,Gary,1]
 LoseText = "You caught me off guard!"
-Pokemon = EEVEE,10
+Pokemon = BULBASAUR,10
 #------------------------------- Route 1
 [YOUNGSTER,Steve]
 LoseText = "???"
 Pokemon = RATTATA,10
+	Moves = GROWL, TACKLE
 #------------------------------- Forest
 [BUGCATCHER,Charlie]
 LoseText = "METAPOD!"
@@ -35,7 +36,7 @@ Pokemon = PIKACHU,12
 [PICNICKER,Brittany]
 LoseText = "SEWADDLE!"
 Pokemon = SEWADDLE,12
-#------------------------------- Pewter Mine
+#------------------------------- Pewter Mine (Nugget)
 [WORKER,Patrick]
 LoseText = "Yikes!"
 Pokemon = GEODUDE,13
@@ -49,11 +50,6 @@ Pokemon = GEODUDE,13
 LoseText = "Yikes!"
 Pokemon = GEODUDE,13
 Pokemon = GEODUDE,14
-#------------------------------- Pewter Mine
-[SCIENTIST_F,Sandy]
-LoseText = "Yikes!"
-Pokemon = GEODUDE,15
-Pokemon = MAGNEMITE,16
 #------------------------------- Pewter Gym
 [WORKER,Sheen]
 LoseText = "Yikes!"
@@ -67,10 +63,34 @@ Pokemon = GEODUDE,13
 LoseText = "Yikes!"
 Pokemon = GEODUDE,13
 #------------------------------- Pewter Gym
-[GYMLEADER_BROCK,Brock]
+[LEADER_BROCK,Brock]
 LoseText = "My ONIX!"
 Pokemon = ANORITH,16
 Pokemon = CARKOL,16
 Pokemon = ONIX,17
     Form = 1
-#-------------------------------
+#------------------------------- Pewter City
+[RIVAL,Gary,2]
+Pokemon = BULBASAUR,15
+Pokemon = STARLY,14
+Pokemon = SEEDOT,15
+#------------------------------- Test Entry
+[LEADER_BROCK,Misty]
+Items = FULLRESTORE,FULLRESTORE
+LoseText = "HP, Attack, Defense, Speed, Sp. Attack, Sp. Defense"
+Pokemon = ONIX,14
+    Name = Rocky
+    Gender = male
+    Shiny = yes
+    Moves = HEADSMASH,ROCKTHROW,RAGE,ROCKTOMB
+    Ability = 0
+    Item = SITRUSBERRY
+    IV = 20
+    Ball = 19
+	Form = 1
+	Nature = ADAMANT
+	IV = 31,31,31,31,31,31
+	EV = 252,252,0,0,0,0
+	Happiness = 255
+	Shadow = no
+	Ball = 1

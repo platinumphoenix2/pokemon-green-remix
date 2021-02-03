@@ -45,3 +45,15 @@ Land
     BUDEW,5
     SEWADDLE,5
     SHROOM,5
+#-------------------------------
+030 # Pewter Mine
+20,10,10
+Cave
+	GEODUDE,5
+	ARON,5
+	ROGGENROLA,5
+	ROLYCOLY,5
+	PHANPY,5
+	MACHOP,5
+	MAKUHITA,5
+	LARVITAR,5

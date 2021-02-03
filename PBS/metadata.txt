@@ -1,13 +1,14 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [000]
-PlayerA = POKEMONTRAINER_Red,trchar000,!GenericBike,!GenericSurf,!GenericRun,!GenericDive,!GenericFish,!GenericSurf
+PlayerA = POKEMONTRAINER_Lucas,trchar000,trchar000_bike,trchar000_Surf,trchar000_Run,trchar000_Surf,trchar000_Fish,trchar000_Surf
+PlayerB = POKEMONTRAINER_Dawn,trchar001,trchar001_bike,trchar001_Surf,trchar001_Run,trchar001_Surf,trchar001_Fish,trchar001_Surf
 TrainerVictoryME = VictoryTrainer.mp3
 WildVictoryME = VictoryWild.mp3
 TrainerBattleBGM = TrainerDefault.mp3
 SurfBGM = GenericSurf.mp3
 BicycleBGM = GenericBicycle
-Home = 6,8,25,6
+Home = 6,8,24,6
 WildBattleBGM = PokemonWild.mp3
 #-------------------------------
 [005]
