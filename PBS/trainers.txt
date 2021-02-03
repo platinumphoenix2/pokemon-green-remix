@@ -1,10 +1,10 @@
 ﻿#------------------------------- PALLET TOWN: LAB
 [RIVAL,Gary,1]
 LoseText = "You caught me off guard!"
-Pokemon = BULBASAUR,10
+Pokemon = CHARMANDER,10
 #------------------------------- Route 1
 [YOUNGSTER,Steve]
-LoseText = "???"
+LoseText = "But I trained so hard!"
 Pokemon = RATTATA,10
 	Moves = GROWL, TACKLE
 #------------------------------- Forest
@@ -13,29 +13,25 @@ LoseText = "METAPOD!"
 Pokemon = METAPOD,10
 #------------------------------- Forest
 [BUGCATCHER,Louie]
-LoseText = "Metapod!"
+LoseText = "Way to ruin the day!"
 Pokemon = PARAS,10
 #------------------------------- Forest
 [BUGCATCHER,Alph]
-LoseText = "Metapod!"
+LoseText = "That's my third loss today."
 Pokemon = NINCADA,11
 #------------------------------- Forest
 [BUGCATCHER,Smallimar]
-LoseText = "Metapod!"
+LoseText = "Well, you can go now."
 Pokemon = BLIPBUG,11
 #------------------------------- Forest
 [CAMPER,Olimar]
-LoseText = "Metapod!"
+LoseText = "The team isn't all that cool anyways."
 Pokemon = PARAS,11
 Pokemon = NINCADA,12
 #------------------------------- Forest
 [PICNICKER,Bea]
-LoseText = "Pikachu!"
+LoseText = "I tagged a winner!"
 Pokemon = PIKACHU,12
-#------------------------------- Forest
-[PICNICKER,Brittany]
-LoseText = "SEWADDLE!"
-Pokemon = SEWADDLE,12
 #------------------------------- Pewter Mine (Nugget)
 [WORKER,Patrick]
 LoseText = "Yikes!"
@@ -71,7 +67,7 @@ Pokemon = ONIX,17
     Form = 1
 #------------------------------- Pewter City
 [RIVAL,Gary,2]
-Pokemon = BULBASAUR,15
+Pokemon = CHARMANDER,15
 Pokemon = STARLY,14
 Pokemon = SEEDOT,15
 #------------------------------- Test Entry
