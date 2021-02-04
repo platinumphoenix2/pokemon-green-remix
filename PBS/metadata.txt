@@ -14,38 +14,44 @@ WildBattleBGM = PokemonWild.mp3
 [005]
 # Pallet Town
 Outdoor = true
-Environment = ForestGrass
 ShowArea = true
+BattleBack = Field
+#-------------------------------
+[007]
+# Oak's Lab
+Outdoor = false
+ShowArea = false
+BattleBack = Indoor1
 #-------------------------------
 [008]
 # Pallet Town
 Outdoor = true
-Environment = ForestGrass
 ShowArea = true
+BattleBack = Field
 #-------------------------------
 [009]
 # Viridian City
 Outdoor = true
-Environment = ForestGrass
 ShowArea = true
+BattleBack = Field
 #-------------------------------
 [012]
 # Pewter City
 Outdoor = true
-Environment = ForestGrass
 ShowArea = true
+BattleBack = Mountain
 #-------------------------------
 [013]
 # Route 1
 Outdoor = true
-Environment = ForestGrass
 ShowArea = true
+BattleBack = Field
 #-------------------------------
 [014]
 # Wrangle Forest
 Outdoor = true
-Environment = ForestGrass
 ShowArea = true
+BattleBack = Forest
 #-------------------------------
 [015]
 # Wrangle Forest - Right Filler
@@ -57,16 +63,17 @@ ShowArea = true
 # Wrangle Forest
 Outdoor = true
 ShowArea = true
+BattleBack = Forest
 #-------------------------------
 [029]
 # Viridian City Well
 Outdoor = false
-Environment = ForestGrass
 ShowArea = false
 DarkMap = true
+BattleBack = Cave
 #-------------------------------
 [030]
 # Pewter City Rocky Dungeon
 Outdoor = false
-Environment = ForestGrass
 Dungeon = true
+BattleBack = Cave

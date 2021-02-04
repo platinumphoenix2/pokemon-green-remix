@@ -2,6 +2,7 @@
 [RIVAL,Gary,1]
 LoseText = "You caught me off guard!"
 Pokemon = CHARMANDER,10
+	Moves = GROWL, TACKLE
 #------------------------------- Route 1
 [YOUNGSTER,Steve]
 LoseText = "But I trained so hard!"
@@ -14,7 +15,7 @@ Pokemon = METAPOD,10
 #------------------------------- Forest
 [BUGCATCHER,Louie]
 LoseText = "Way to ruin the day!"
-Pokemon = PARAS,10
+Pokemon = PARAS,11
 #------------------------------- Forest
 [BUGCATCHER,Alph]
 LoseText = "That's my third loss today."
@@ -31,7 +32,7 @@ Pokemon = NINCADA,12
 #------------------------------- Forest
 [PICNICKER,Bea]
 LoseText = "I tagged a winner!"
-Pokemon = PIKACHU,12
+Pokemon = PIKACHU,13
 #------------------------------- Pewter Mine (Nugget)
 [WORKER,Patrick]
 LoseText = "Yikes!"
