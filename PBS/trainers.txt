@@ -1,4 +1,4 @@
-﻿#------------------------------- PALLET TOWN: LAB
+﻿#------------------------------- Pallet Town Lab (Rival)
 [RIVAL,Gary,1]
 LoseText = "You caught me off guard!"
 Pokemon = CHARMANDER,10
@@ -8,69 +8,91 @@ Pokemon = CHARMANDER,10
 LoseText = "But I trained so hard!"
 Pokemon = RATTATA,10
 	Moves = GROWL, TACKLE
-#------------------------------- Forest
+#------------------------------- Wrangle Forest
 [BUGCATCHER,Charlie]
 LoseText = "METAPOD!"
 Pokemon = METAPOD,10
-#------------------------------- Forest
+#------------------------------- Wrangle Forest
 [BUGCATCHER,Louie]
 LoseText = "Way to ruin the day!"
 Pokemon = PARAS,11
-#------------------------------- Forest
+#------------------------------- Wrangle Forest
 [BUGCATCHER,Alph]
 LoseText = "That's my third loss today."
 Pokemon = NINCADA,11
-#------------------------------- Forest
+#------------------------------- Wrangle Forest
 [BUGCATCHER,Smallimar]
 LoseText = "Well, you can go now."
 Pokemon = BLIPBUG,11
-#------------------------------- Forest
+#------------------------------- Wrangle Forest
 [CAMPER,Olimar]
 LoseText = "The team isn't all that cool anyways."
 Pokemon = PARAS,11
 Pokemon = NINCADA,12
-#------------------------------- Forest
+#------------------------------- Wrangle Forest
 [PICNICKER,Bea]
 LoseText = "I tagged a winner!"
 Pokemon = PIKACHU,13
-#------------------------------- Pewter Mine (Nugget)
-[WORKER,Patrick]
-LoseText = "Yikes!"
-Pokemon = GEODUDE,13
-#------------------------------- Pewter Mine
-[WORKER,Eugene]
-LoseText = "Yikes!"
-Pokemon = GEODUDE,13
-Pokemon = GEODUDE,13
-#------------------------------- Pewter Mine
-[WORKER,Sheldon]
-LoseText = "Yikes!"
-Pokemon = GEODUDE,13
-Pokemon = GEODUDE,14
-#------------------------------- Pewter Gym
-[WORKER,Sheen]
-LoseText = "Yikes!"
-Pokemon = GEODUDE,13
-#------------------------------- Pewter Gym
-[WORKER,Carl]
-LoseText = "Yikes!"
-Pokemon = GEODUDE,13
-#------------------------------- Pewter Gym
-[WORKER,Jimmy]
-LoseText = "Yikes!"
-Pokemon = GEODUDE,13
-#------------------------------- Pewter Gym
-[LEADER_BROCK,Brock]
-LoseText = "My ONIX!"
-Pokemon = ANORITH,16
-Pokemon = CARKOL,16
-Pokemon = ONIX,17
-    Form = 1
-#------------------------------- Pewter City
+#------------------------------- Pewter City (Rival)
 [RIVAL,Gary,2]
 Pokemon = CHARMANDER,15
 Pokemon = STARLY,14
 Pokemon = SEEDOT,15
+#------------------------------- Pewter Mine (Nugget)
+[WORKER,Patrick]
+LoseText = "We have a winner!"
+Pokemon = GEODUDE,15
+    IV = 31
+Pokemon = ONIX,15
+    Ability = 1
+    IV = 25
+#------------------------------- Pewter Mine
+[WORKER,Eugene]
+LoseText = "Sharing is caring!"
+Pokemon = ARON,15
+#------------------------------- Pewter Mine
+[WORKER,Sheldon]
+LoseText = "This mine isn't much of a secret."
+Pokemon = GEODUDE,14
+Pokemon = ROLYCOLY,15
+#------------------------------- Pewter Gym
+[WORKER,Sheen]
+LoseText = "You might be able to take on Brock."
+Pokemon = GEODUDE,16
+Pokemon = GEODUDE,17
+#------------------------------- Pewter Gym
+[WORKER,Carl]
+LoseText = "Work, work, work!"
+Pokemon = BONSLY,16
+#------------------------------- Pewter Gym
+[WORKER,Jimmy]
+LoseText = "You're a scary trainer after all."
+Pokemon = RHYHORN,17
+#------------------------------- Pewter Gym (Normal)
+[LEADER_BROCK,Brock,0]
+Items = POTION
+Pokemon = ANORITH,16
+Pokemon = CARKOL,16
+    Moves = STEALTHROCK,SMOKESCREEN,FIRESPIN,RAPIDSPIN
+    Ability = 0
+Pokemon = ONIX,18
+    Moves = ROCKTOMB,DIG,BODYSLAM,FIRESPIN
+    Form = 1
+    Item = ORANBERRY
+    IV = 25
+#------------------------------- Pewter Gym (Harder)
+[LEADER_BROCK,Brock,1]
+Items = POTION
+Pokemon = ANORITH,17
+Pokemon = CARKOL,18
+    Moves = STEALTHROCK,SMOKESCREEN,FIRESPIN,RAPIDSPIN
+    Ability = 0
+    IV = 25
+Pokemon = ONIX,19
+    Moves = ROCKTOMB,DIG,BODYSLAM,FIRESPIN
+    Form = 1
+    Item = ORANBERRY
+    IV = 27
 #------------------------------- Test Entry
 [LEADER_BROCK,Misty]
 Items = FULLRESTORE,FULLRESTORE
@@ -79,7 +101,7 @@ Pokemon = ONIX,14
     Name = Rocky
     Gender = male
     Shiny = yes
-    Moves = HEADSMASH,ROCKTHROW,RAGE,ROCKTOMB
+    Moves = EMBER
     Ability = 0
     Item = SITRUSBERRY
     IV = 20
@@ -90,4 +112,3 @@ Pokemon = ONIX,14
 	EV = 252,252,0,0,0,0
 	Happiness = 255
 	Shadow = no
-	Ball = 1

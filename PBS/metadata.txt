@@ -1,7 +1,7 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [000]
-PlayerA = POKEMONTRAINER_Lucas,trchar000,trchar000_bike,trchar000_Surf,trchar000_Run,trchar000_Surf,trchar000_Fish,trchar000_Surf
+PlayerA = POKEMONTRAINER_Lucas,trchar000,trchar000_bike,trchar000_surf,trchar000_run,trchar000_surf,trchar000_fish,trchar000_surf
 PlayerB = POKEMONTRAINER_Dawn,trchar001,trchar001_bike,trchar001_Surf,trchar001_Run,trchar001_Surf,trchar001_Fish,trchar001_Surf
 TrainerVictoryME = VictoryTrainer.mp3
 WildVictoryME = VictoryWild.mp3
@@ -39,7 +39,7 @@ BattleBack = Field
 # Pewter City
 Outdoor = true
 ShowArea = true
-BattleBack = Mountain
+BattleBack = Rocky
 #-------------------------------
 [013]
 # Route 1
@@ -70,10 +70,15 @@ BattleBack = Forest
 Outdoor = false
 ShowArea = false
 DarkMap = true
-BattleBack = Cave
+BattleBack = Cave1
 #-------------------------------
 [030]
-# Pewter City Rocky Dungeon
+# Pewter City Mine
 Outdoor = false
 Dungeon = true
-BattleBack = Cave
+BattleBack = Cave1
+#-------------------------------
+[034]
+# Pewter Gym
+Outdoor = false
+BattleBack = Rocky
