@@ -950,4 +950,5 @@
 916,BATWING,Bat Wing,Bat Wings,1,300,"A bat's wing - - the hell can you do with this?",0,0,0,
 #-------------------------------- New Held Items
 917,STURDYSHELL,Sturdy Shell,Sturdy Shells,1,2000,"A hard shell that slightly boosts a Pokemon's defense stats.",0,0,0,
-918,POISONSTONE,Poison Stone,Poison Stones,1,300,"A peculiar stone that makes certain species of Pokémon evolve. It hurts to hold it!",1,0,7,
+918,CHEMICALSTONE,Chemical Stone,Chemical Stones,1,300,"A peculiar stone that makes certain species of Pokémon evolve. It hurts to hold it!",1,0,7,
+919,POKEDEX,Pokédex,Pokédex,6,0,"Records data on Pokémon.",2,0,6,

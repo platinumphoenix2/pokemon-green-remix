@@ -10,7 +10,7 @@ Pokemon = RATTATA,10
 	Moves = GROWL, TACKLE
 #------------------------------- Wrangle Forest
 [BUGCATCHER,Charlie]
-LoseText = "METAPOD!"
+LoseText = "My Pokémon!"
 Pokemon = METAPOD,10
 #------------------------------- Wrangle Forest
 [BUGCATCHER,Louie]
