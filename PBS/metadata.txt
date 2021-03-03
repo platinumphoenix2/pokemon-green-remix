@@ -2,7 +2,7 @@
 #-------------------------------
 [000]
 PlayerA = POKEMONTRAINER_Lucas,trchar000,trchar000_bike,trchar000_surf,trchar000_run,trchar000_surf,trchar000_fish,trchar000_surf
-PlayerB = POKEMONTRAINER_Dawn,trchar001,trchar001_bike,trchar001_Surf,trchar001_Run,trchar001_Surf,trchar001_Fish,trchar001_Surf
+PlayerB = POKEMONTRAINER_Dawn,trchar001,trchar001_bike,trchar001_surf,trchar001_run,trchar001_surf,trchar001_fish,trchar001_surf
 TrainerVictoryME = VictoryTrainer.mp3
 WildVictoryME = VictoryWild.mp3
 TrainerBattleBGM = TrainerDefault.mp3
@@ -13,72 +13,72 @@ WildBattleBGM = PokemonWild.mp3
 #-------------------------------
 [005]
 # Pallet Town
+BattleBack = Field
 Outdoor = true
 ShowArea = true
-BattleBack = Field
 #-------------------------------
 [007]
-# Oak's Lab
+# Lab
+BattleBack = Indoor1
 Outdoor = false
 ShowArea = false
-BattleBack = Indoor1
 #-------------------------------
 [008]
 # Pallet Town
+BattleBack = Field
 Outdoor = true
 ShowArea = true
-BattleBack = Field
 #-------------------------------
 [009]
 # Viridian City
+BattleBack = Field
 Outdoor = true
 ShowArea = true
-BattleBack = Field
 #-------------------------------
 [012]
 # Pewter City
+BattleBack = Rocky
 Outdoor = true
 ShowArea = true
-BattleBack = Rocky
 #-------------------------------
 [013]
 # Route 1
+BattleBack = Field
 Outdoor = true
 ShowArea = true
-BattleBack = Field
 #-------------------------------
 [014]
-# Wrangle Forest
+# Viridian Forest
+BattleBack = Forest
 Outdoor = true
 ShowArea = true
-BattleBack = Forest
 #-------------------------------
 [015]
-# Wrangle Forest - Right Filler
+# Viridian Forest - Right Filler
 #-------------------------------
 [016]
-# Wrangle Forest - Left Filler
+# Viridian Forest - Left Filler
 #-------------------------------
 [017]
-# Wrangle Forest
+# Viridian Forest
+BattleBack = Forest
 Outdoor = true
 ShowArea = true
-BattleBack = Forest
 #-------------------------------
 [029]
-# Viridian City Well
+# Well
+BattleBack = Cave1
+DarkMap = true
 Outdoor = false
 ShowArea = false
-DarkMap = true
-BattleBack = Cave1
 #-------------------------------
 [030]
-# Pewter City Mine
-Outdoor = false
-Dungeon = true
+# Pewter Mine
 BattleBack = Cave1
+Dungeon = true
+Outdoor = false
 #-------------------------------
 [034]
 # Pewter Gym
-Outdoor = false
 BattleBack = Rocky
+Outdoor = false

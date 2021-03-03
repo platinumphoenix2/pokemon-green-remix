@@ -1,5 +1,4 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
-# LAND: 15, 15, 15, 12, 12, 12, 10, 9
 #-------------------------------
 013 # Route 1
 20,10,10
@@ -7,22 +6,22 @@ Land
     PIDGEY,5
     RATTATA,5
     SPEAROW,5
-	SENTRET,5
+    SENTRET,5
     ZIGZAGOON,5
-	PATRAT,5
+    PATRAT,5
     YUNGOOS,5
     STARLY,5
 LandNight
-	RATTATA,5
-	POOCHYENA,5
-	SPEAROW,5
-	SENTRET,5
-	ZIGZAGOON,5
-	PATRAT,5
-	YUNGOOS,5
-	STARLY,5
+    RATTATA,5
+    POOCHYENA,5
+    SPEAROW,5
+    SENTRET,5
+    ZIGZAGOON,5
+    PATRAT,5
+    YUNGOOS,5
+    STARLY,5
 #-------------------------------
-014 # Wrangle Forest
+014 # Viridian Forest
 20,10,10
 Land
     METAPOD,5
@@ -34,7 +33,7 @@ Land
     SEWADDLE,5
     SHROOM,5
 #-------------------------------
-017 # Wrangle Forest
+017 # Viridian Forest
 20,10,10
 Land
     METAPOD,5
@@ -49,11 +48,11 @@ Land
 030 # Pewter Mine
 20,10,10
 Cave
-	GEODUDE,5
-	ARON,5
-	ROGGENROLA,5
-	ROLYCOLY,5
-	PHANPY,5
-	MACHOP,5
-	MAKUHITA,5
-	BAT,5
+    GEODUDE,5
+    ARON,5
+    ROGGENROLA,5
+    ROLYCOLY,5
+    PHANPY,5
+    MACHOP,5
+    MAKUHITA,5
+    BAT,5

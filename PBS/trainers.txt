@@ -1,5 +1,5 @@
 ﻿#------------------------------- Pallet Town Lab (Rival)
-[RIVAL,Gary,1]
+[RIVAL,Blue,1]
 LoseText = "You caught me off guard!"
 Pokemon = CHARMANDER,10
 	Moves = GROWL, TACKLE
@@ -34,7 +34,7 @@ Pokemon = NINCADA,12
 LoseText = "I tagged a winner!"
 Pokemon = PIKACHU,13
 #------------------------------- Pewter City (Rival)
-[RIVAL,Gary,2]
+[RIVAL,Blue,2]
 Pokemon = CHARMANDER,15
 Pokemon = STARLY,14
 Pokemon = SEEDOT,15

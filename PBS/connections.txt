@@ -1,10 +1,10 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-# Wrangle Forest (14) - Wrangle Forest - Left Filler (16)
+# Viridian Forest (14) - Viridian Forest - Left Filler (16)
 14,West,0,16,East,0
-# Wrangle Forest (14) - Wrangle Forest (17)
+# Viridian Forest (14) - Viridian Forest (17)
 14,East,0,17,West,0
-# Wrangle Forest - Right Filler (15) - Wrangle Forest (17)
+# Viridian Forest - Right Filler (15) - Viridian Forest (17)
 15,West,0,17,East,0
 # Route 1 (13) - Pallet Town (5)
 13,South,0,5,North,0
@@ -20,3 +20,11 @@
 20,East,72,8,West,0
 # Viridian City (9) - Viridian City Filler (20)
 9,South,0,20,North,2
+# Route 2 (43) - Pewter City (12)
+43,South,0,12,North,34
+# Route 2 (45) - Route 2 (44)
+45,South,0,44,North,31
+# Route 2 Filler (46) - Route 2 (44)
+46,South,0,44,North,8
+# Route 2 Filler (46) - Route 2 (45)
+46,East,0,45,West,16
